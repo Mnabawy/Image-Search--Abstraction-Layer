@@ -10,7 +10,6 @@ export default function Images(props) {
   });
   const [disabled, setDisabled] = useState(false);
   const [newUrl, setNewUrl] = useState("");
-  // const [disabled, setDisable] = useState(false);
 
   let url = "http://image-search-abstraction-layer.freecodecamp.rocks/";
 
