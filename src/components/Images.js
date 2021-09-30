@@ -23,17 +23,22 @@ export default function Images(props) {
       setNewUrl(
         "http://image-search-abstraction-layer.freecodecamp.rocks/recent"
       );
-    } else {
+    } else if (value === "recent") {
       setNewUrl("");
     }
   }
 
   const useUrl = (
     <p>
-      here is your URL: <a href={url}>{newUrl.length === 0 ? url : newUrl}</a>
+      here is your URL:
+      {newUrl.length === 0 ? (
+        <a href={url}>{url} </a>
+      ) : (
+        <a href={newUrl}>{newUrl} </a>
+      )}
     </p>
   );
-
+  console.log(newUrl);
   return (
     <div>
       <p style={{ display: "inline" }}>Type of Search:</p>
